@@ -1,17 +1,18 @@
 # Problem 1
+
 from projectile import Projectile
 
 def main ():
     Introduction()
     angle, vel, hO, time = getInputs()
     cball = Projectile(angle, vel, hO)
-    heightlist=[]
-    while cball.getY() >=0:
+    heightlist = []
+    while cball.getY() > 0:
         cball.update(time)
-        height=cball.getY()
+        height = cball.getY()
         heightlist.append(height)
     print ("\nDistance traveled: {0:0.1f} meters.".format(cball.getX()))
-    maxheight=max(heightlist)
+    maxheight = max(heightlist)
     print ("Maximum height achieved: {0:0.1f} meters.".format(maxheight))
 
 def Introduction():
