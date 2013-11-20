@@ -19,7 +19,7 @@ def main ():
         keepgoing = input("Type any key to enter another course or type enter to quit. ")
 
     #Print results
-    GPA = round(astudent.gpa(), 1)
+    GPA = round(a_student.gpa(), 1)
     print ("The student's GPA is: ", GPA)
 
 
