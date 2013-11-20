@@ -2,14 +2,13 @@
 
 from projectile import Projectile
 from tracker import Tracker
-from graphics import*
+from graphics import *
 from time import sleep
 sleep(0.005)
 
 
 
 def main ():
-
 
     #Introduction
     print ("This program graphically depicts the flight of a cannonball. ")
@@ -21,13 +20,13 @@ def main ():
     h = eval(input("Enter the initial height in meters: "))
 
     #Create tracker
-    projectile=Projectile(a,v,h)
-    win=GraphWin(200,200)
-    win.setCoords(0.0,0.0,25.0,25.0)
-    tracker=Tracker(win, projectile)
-    time=0.0
-    while projectile.getY()>=-5:
-        time+=.0005
+    projectile = Projectile(a, v, h)
+    win = GraphWin(200, 200)
+    win.setCoords(0.0, 0.0, 25.0, 25.0)
+    tracker = Tracker(win, projectile)
+    time = 0.0
+    while projectile.getY() >= -5:
+        time += .0005
         projectile.update(time)
         tracker.update()
 
@@ -40,5 +39,5 @@ def main ():
 
 
 
-if __name__=='__main__':
+if __name__ == '__main__':
     main ()
