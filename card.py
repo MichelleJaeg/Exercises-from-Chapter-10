@@ -23,6 +23,7 @@ class Card:
             return self.getRank()
 
     def __str__(self):
+        
         rank = self.rank
         if rank == 1:
             rank = "Ace"
@@ -50,7 +51,6 @@ class Card:
             rank = "Queen"
         if rank == 13:
             rank = "King"
-
 
         suit = self.suit
         if suit == 's':
