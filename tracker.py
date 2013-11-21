@@ -1,4 +1,4 @@
-from graphics import*
+from graphics import *
 
 class Tracker:
 
@@ -12,15 +12,15 @@ class Tracker:
         # Creates a Tracker object and draws a circle in window
         #   at the current position of objToTrack.
 
-        self.objToTrack=objToTrack
-        self.circ=Circle(Point(objToTrack.getX(), objToTrack.getY()),2)
+        self.objToTrack = objToTrack
+        self.circ = Circle(Point(objToTrack.getX(), objToTrack.getY()), 2)
         self.circ.draw(window)
 
     def update(self):
-        point=self.circ.getCenter()
-        x=point.getX()
-        y=point.getY()
-        self.circ.move(self.objToTrack.getX()-x, self.objToTrack.getY()-y)
+        point = self.circ.getCenter()
+        x = point.getX()
+        y = point.getY()
+        self.circ.move(self.objToTrack.getX() - x, self.objToTrack.getY() - y)
 
 
 
