@@ -17,25 +17,26 @@ class Student:
         return self.qpoints
 
     def gpa(self):
-        return self.qpoints/self.hours
+        return self.qpoints / self.hours
 
     def addGrade(self, gradePoint, credits):
-        self.qpoints+=credits*gradePoint
-        self.hours+=credits
+        self.qpoints += credits * gradePoint
+        self.hours += credits
 
     # For problem 6
     def addLetterGrade(self,letterGrade,credits):
-        if letterGrade=="A":
-            gradePoint=4
-        elif letterGrade=="B":
-            gradePoint=3
-        elif letterGrade=="C":
-            gradePoint=2
-        elif letterGrade=="D":
-            gradePoint=1
+        
+        if letterGrade == "A":
+            gradePoint = 4
+        elif letterGrade == "B":
+            gradePoint = 3
+        elif letterGrade == "C":
+            gradePoint = 2
+        elif letterGrade == "D":
+            gradePoint = 1
         else:
-            gradePoint=0
-        self.qpoints+=credits * gradePoint
-        self.hours+=credits
+            gradePoint = 0
+        self.qpoints += credits * gradePoint
+        self.hours += credits
 
 
